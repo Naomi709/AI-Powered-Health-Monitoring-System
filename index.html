@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Dashboard</title>
+</head>
+<body>
+    <h2>Latest Health Reading</h2>
+    <ul>
+        <li>Heart Rate: {{ data['heart_rate'] }}</li>
+        <li>Blood Oxygen: {{ data['blood_oxygen'] }}</li>
+        <li>Activity Level: {{ data['activity_level'] }}</li>
+        <li>Status: {{ '⚠️ ' + data['anomaly'] if data['anomaly'] == 'Anomaly' else '✅ Normal' }}</li>
+    </ul>
+</body>
+</html>
